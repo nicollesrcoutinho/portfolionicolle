@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Estilo do cabeçalho de navegação */
+nav {
+    background-color: #70deff83; /* Cor de fundo do menu */
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o menu */
+    position: fixed; /* Fixa o menu no topo */
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: #005070;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #9ae2fa85;
+    border-radius: 4px;
+}
+
+/* Espaço para o conteúdo */
+.container {
+    background-color: #9ae2fa85;
+    width: 90%;
+    max-width: 900px;
+    margin-top: 80px; /* Distância para não cobrir o conteúdo após o menu fixo */
+    border-radius: 5px;
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+h2 {
+    font-size: 15px;
+    color: #00729583;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #007295;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #333;
+}
+
+
+
+p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+
+.profile-image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+}

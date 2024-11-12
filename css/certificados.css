@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    padding-top: 60px; /* Espaço para o menu fixo */
+}
+
+/* Estilo do cabeçalho de navegação */
+nav {
+    background-color: #70deff83; /* Cor de fundo do menu */
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o menu */
+    position: fixed; /* Fixa o menu no topo */
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: #005070;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #9ae2fa85;
+    border-radius: 4px;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2rem;
+    color: #3f9dc38e;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+/* Estilos para o contêiner da galeria de imagens */
+.gallery {
+    display: flex;
+    gap: 10px; /* Espaçamento de 15px entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas em telas menores */
+    justify-content: center;
+    padding: 20px;
+    background-color: #9ae2fa85;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilos para as imagens dentro da galeria */
+.gallery img {
+    width: 250px; /* Define um tamanho fixo para as imagens */
+    height: auto;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de hover nas imagens */
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+    /* Ajusta o título para um tamanho menor em telas pequenas */
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .gallery img {
+        width: 100%; /* Imagens ocupam 100% da largura disponível em telas menores */
+        max-width: 300px; /* Máximo de 300px de largura para as imagens */
+    }
+
+    .menu {
+        flex-direction: column; /* Menu em formato de coluna */
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0; /* Espaçamento maior entre os itens do menu */
+    }
+}
+
+/* Para telas muito pequenas, como smartphones verticais */
+@media (max-width: 480px) {
+    .gallery img {
+        width: 100%; /* Imagens ocupam 100% da largura */
+        margin-bottom: 15px; /* Margem inferior para separar as imagens */
+    }
+
+    .menu a {
+        font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+        padding: 8px 15px;
+    }
+}
